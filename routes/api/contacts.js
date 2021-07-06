@@ -7,16 +7,16 @@ const {
   addContact,
   removeContact,
   updateContact,
-} = require('../../model/index');
+} = require('../../controllers');
 
 router.get('/', listContacts);
 
-// router.get('/:contactId', getContactById);
+router.get('/:contactId', getContactById);
 
 router.post('/', addContact);
 
-// router.delete('/:contactId', removeContact);
+router.delete('/:contactId', removeContact);
 
-// router.put('/:contactId', updateContact);
+router.put('/:contactId', updateContact);
 
 module.exports = router;
